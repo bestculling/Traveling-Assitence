@@ -2,10 +2,11 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
+import { category, province } from '../data/filterExplore'
 
 function Filter() {
     return (
-        <div style={{ width: "200px" }} className='rounded bg-white'>
+        <div style={{ width: "200px" }} className='overflow-auto rounded bg-white'>
             <Container>
                 <div className="my-2 filter__header">
                     จังหวัด
@@ -14,11 +15,12 @@ function Filter() {
                     <Dropdown.Toggle variant="dark" id="dropdown-basic">
                         เลือกจังหวัด
                     </Dropdown.Toggle>
-
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        {
+                            province.map((p, i) => (
+                                <Dropdown.Item key={i}>{p}</Dropdown.Item>
+                            ))
+                        }
                     </Dropdown.Menu>
                 </Dropdown>
                 <div className="my-2 filter__header">
@@ -37,11 +39,11 @@ function Filter() {
                 </div>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="ทะเล" />
-                        <Form.Check type="checkbox" label="ภูเขา" />
-                        <Form.Check type="checkbox" label="Check me out" />
-                        <Form.Check type="checkbox" label="Check me out" />
-                        <Form.Check type="checkbox" label="Check me out" />
+                        {
+                            category.map((c, i) => (
+                                <Form.Check key={i} type="checkbox" label={c} />
+                            ))
+                        }
                     </Form.Group>
                 </Form>
             </Container>

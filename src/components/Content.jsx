@@ -6,7 +6,7 @@ import { data } from '../data/north'
 function Content() {
 
     return (
-        <div className='w-100 rounded bg-white'>
+        <div className='overflow-hidden rounded bg-white'>
             <Container>
                 <Card data={data} />
             </Container>

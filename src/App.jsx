@@ -6,7 +6,7 @@ import Layout from './components/Layout'
 
 function App() {
   return (
-    <div className='h-100 bg-body-secondary'>
+    <div className='h-100 bg-body-secondary overflow-auto'>
       <Navbar />
       <Layout>
         <Filter />
