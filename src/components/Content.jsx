@@ -1,14 +1,12 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import Card from './Card'
-import { data } from '../data/north'
 
 function Content() {
-
     return (
-        <div className='overflow-hidden rounded bg-white'>
+        <div style={{ width: "850px" }} className='overflow-hidden rounded bg-white'>
             <Container>
-                <Card data={data} />
+                <Card />
             </Container>
         </div>
     )

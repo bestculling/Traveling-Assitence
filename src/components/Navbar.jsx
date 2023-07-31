@@ -7,7 +7,7 @@ function Index() {
     return (
         <Navbar expand="lg" className="bg-white">
             <Container>
-                <Navbar.Brand href="#home">สถานที่ท่องเที่ยวยอดนิยมในประเทศไทย</Navbar.Brand>
+                <Navbar.Brand href="#home"><h2>สถานที่ท่องเที่ยวยอดนิยมในประเทศไทย</h2></Navbar.Brand>
             </Container>
         </Navbar>
     )

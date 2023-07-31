@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 
 function Layout({ children }) {
     return (
-        <Container className='w-100 d-flex mt-4 gap-4'>
+        <Container className='d-flex justify-content-center mt-4 gap-4'>
             {children}
         </Container>
     )
