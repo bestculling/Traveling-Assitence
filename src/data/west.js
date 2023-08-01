@@ -1,7 +1,7 @@
 export const west = [
     {
-        province: "ระยอง",
-        name: "หมู่เกาะมัน",
+        province: "test",
+        name: "test",
         location: "อ.แกลง จ.ระยอง",
         image: [
             "https://s359.kapook.com/pagebuilder/d3631e6a-0812-41ff-9761-32dd9fa963a1.jpg",
