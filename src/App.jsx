@@ -10,6 +10,9 @@ import { north } from './data/north'
 import { south } from './data/south'
 import { west } from './data/west'
 import { useState } from 'react'
+import BackToUp from '@uiw/react-back-to-top';
+import { Triangle } from 'react-loader-spinner'
+
 
 export const initialState = [
   ...central,
@@ -23,13 +26,16 @@ function App() {
   const [provinceState, setProvinceState] = useState(initialState)
   return (
     <filterContext.Provider value={{ provinceState, setProvinceState }}>
-      <div className='h-100 bg-body-secondary overflow-auto'>
+      <div className='bg-body-secondary overflow-auto'>
         <Navbar />
         <Layout>
           <Filter />
           <Content />
         </Layout>
       </div>
+      <BackToUp>
+        ^
+      </BackToUp>
     </filterContext.Provider>
   )
 }

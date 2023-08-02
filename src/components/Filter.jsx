@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
-import { category, province } from '../data/filterExplore'
+import { province } from '../data/filterExplore'
 import { useContext, useState } from 'react';
 import { filterContext } from '../context/filterContext';
 import { initialState } from '../App';
@@ -20,6 +20,10 @@ function Filter() {
     }
 
     const filterCategory = e => {
+        if (e.target.value === "ทั้งหมด") {
+            setProvinceState(initialState)
+            return
+        }
         const b = initialState.filter(p => p.tag === e.target.value)
         setProvinceState(b)
     }
@@ -42,6 +46,13 @@ function Filter() {
                 </div>
                 <Form onChange={filterCategory}>
                     <div className='row'>
+                        <Form.Check
+                            style={{ marginLeft: "12px" }}
+                            value='ทั้งหมด'
+                            label='ทั้งหมด'
+                            name="group1"
+                            type="radio"
+                        />
                         {uniqueTag.map((c, i) => (
                             <div key={i} className="mb-1">
                                 <Form.Check
