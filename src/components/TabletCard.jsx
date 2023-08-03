@@ -16,7 +16,7 @@ function Index() {
         <div className='d-block d-lg-none'>
             {
                 provinceState.length !== 0 ? (provinceState.map((e, i) => (
-                    <div key={i} className='my-4 border p-3 rounded'>
+                    <div key={i} className='my-4 border p-3 rounded text-white'>
                         <Container>
                             <Row>
                                 <Col>
@@ -25,12 +25,12 @@ function Index() {
                                     </div>
                                 </Col>
                                 <Col className='d-flex flex-column gap-2'>
-                                    <Button variant="success">{e.province}</Button>
+                                    <Button variant="outline-success">{e.province}</Button>
                                     <div className='fw-bold'>{e.name}</div>
                                     <div>{e.desc}</div>
                                     <div className='fw-bold'>{e.location}</div>
                                     <Button href={e.credit} target="_blank">เครดิต</Button>
-                                    <Button variant="secondary">#{e.tag}</Button>
+                                    <Button className='text-white' variant="outline-secondary">#{e.tag}</Button>
                                 </Col>
                             </Row>
                         </Container>

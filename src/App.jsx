@@ -11,7 +11,6 @@ import { south } from './data/south'
 import { west } from './data/west'
 import { useState } from 'react'
 import BackToUp from '@uiw/react-back-to-top';
-import { Triangle } from 'react-loader-spinner'
 
 
 export const initialState = [
@@ -26,7 +25,7 @@ function App() {
   const [provinceState, setProvinceState] = useState(initialState)
   return (
     <filterContext.Provider value={{ provinceState, setProvinceState }}>
-      <div className='bg-body-secondary overflow-auto'>
+      <div style={{background: "#121212"}} className='overflow-auto'>
         <Navbar />
         <Layout>
           <Filter />

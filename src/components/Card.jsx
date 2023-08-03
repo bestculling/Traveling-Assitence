@@ -7,22 +7,21 @@ import { filterContext } from '../context/filterContext';
 import './Card.css'
 import Error from './Error';
 
-
 function Index() {
 
     const { provinceState } = useContext(filterContext)
 
     return (
-        <div className='d-none d-lg-block'>
+        <div className='p-2 d-none d-lg-block'>
             {
                 provinceState.length !== 0 ? (provinceState.map((e, i) => (
-                    <Card key={i} className='my-2'>
+                    <Card border="secondary" key={i} className='p-2 bg-dark text-white my-2'>
                         <Container>
                             <div className="my-2">
                                 <div className='d-flex gap-1 justify-content-around'>
                                     {
                                         e.image.map((p, i) => (
-                                            <Image className='hover' key={i} style={{ width: '200px', height: '200px' }} src={p} rounded />
+                                            <Image className='hover' key={i} style={{ width: '180px', height: '180px' }} src={p} rounded />
                                         ))
                                     }
                                 </div>
@@ -30,8 +29,8 @@ function Index() {
                         </Container>
                         <Card.Body>
                             <Card.Title>
-                                <Button variant="success">{e.province}</Button> {' '}
-                                {e.name}
+                                <Button disabled variant="outline-success">{e.province}</Button> {' '}
+                                <span className='mx-2'>{e.name}</span>
                             </Card.Title>
                             <Card.Text>
                                 {e.desc}
@@ -39,10 +38,10 @@ function Index() {
                             <Card.Text>
                                 {e.location}
                             </Card.Text>
-                            <Card.Text>
-                                <Button href={e.credit} target="_blank">เครดิต</Button>
-                            </Card.Text>
-                            <Button variant="secondary">{e.tag}</Button>
+                            <div className='d-flex justify-content-between'>
+                                <Button className='text-white' disabled variant="outline-secondary">#{e.tag}</Button>
+                                <Button href={e.credit} target="_blank">เครดิตข้อมูล</Button>
+                            </div>
                         </Card.Body>
                     </Card>
                 ))) : (

@@ -5,7 +5,7 @@ import TabletCard from './TabletCard'
 
 function Content() {
     return (
-        <div style={{ width: "850px" }} className='overflow-hidden rounded bg-white'>
+        <div style={{ width: "850px" }} className='overflow-hidden rounded bg-dark'>
             <Container>
                 <Card />
                 <TabletCard />
