@@ -1,15 +1,14 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+// import Card from './CardExample'
 import Card from './Card'
-import TabletCard from './TabletCard'
 
 function Content() {
     return (
-        <div style={{ width: "850px" }} className='overflow-hidden rounded bg-dark'>
-            <Container>
-                <Card />
-                <TabletCard />
-            </Container>
+        <div style={{ width: "950px" }} className='overflow-hidden rounded bg-dark'>
+            <Card />
+            {/* <Card />
+                <TabletCard /> */}
         </div>
     )
 }

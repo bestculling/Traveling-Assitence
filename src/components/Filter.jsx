@@ -3,33 +3,33 @@ import Form from 'react-bootstrap/Form';
 import { province } from '../data/filterExplore'
 import { useContext, useState } from 'react';
 import { filterContext } from '../context/filterContext';
-import { initialState } from '../App';
+import { useData } from '../hooks/useData';
 
 function Filter() {
 
+    const data = useData()
     const { provinceState, setProvinceState } = useContext(filterContext)
-
     // Tags ทั้งหมด
-    const allTag = initialState.map(p => p.tag)
+    const allTag = data.map(p => p.tag)
     // ไม่เอา Tag ซ้ำ
     const uniqueTag = allTag.filter((value, index, self) => self.indexOf(value) === index)
 
     const filterProvince = e => {
-        const a = initialState.filter(p => p.province === e.target.value)
+        const a = data.filter(p => p.province === e.target.value)
         setProvinceState(a)
     }
 
     const filterCategory = e => {
         if (e.target.value === "ทั้งหมด") {
-            setProvinceState(initialState)
+            setProvinceState(data)
             return
         }
-        const b = initialState.filter(p => p.tag === e.target.value)
+        const b = data.filter(p => p.tag === e.target.value)
         setProvinceState(b)
     }
 
     return (
-        <div style={{ width: "250px" }} className='overflow-auto rounded bg-dark text-white'>
+        <div style={{ width: "250px" }} className='d-none d-sm-block overflow-auto rounded bg-dark text-white'>
             <Container>
                 <div className="fw-bold my-3 filter__header">
                     จังหวัด

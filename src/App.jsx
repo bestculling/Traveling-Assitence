@@ -1,42 +1,19 @@
-import './App.css'
-import Navbar from './components/Navbar'
-import Filter from './components/Filter'
-import Content from './components/Content'
-import Layout from './components/Layout'
-import { filterContext } from './context/filterContext'
-import { central } from './data/central'
-import { east } from './data/east'
-import { north } from './data/north'
-import { south } from './data/south'
-import { west } from './data/west'
+import { Route, Routes } from "react-router-dom"
 import { useState } from 'react'
-import BackToUp from '@uiw/react-back-to-top';
+import { filterContext } from './context/filterContext'
+import { useData } from './hooks/useData'
+import Home from './pages/Home'
+import About from "./pages/About"
 
-
-export const initialState = [
-  ...central,
-  ...east,
-  ...west,
-  ...north,
-  ...south
-]
-
-function App() {
-  const [provinceState, setProvinceState] = useState(initialState)
+export default function App() {
+  const data = useData()
+  const [provinceState, setProvinceState] = useState(data)
   return (
     <filterContext.Provider value={{ provinceState, setProvinceState }}>
-      <div style={{background: "#121212"}} className='overflow-auto'>
-        <Navbar />
-        <Layout>
-          <Filter />
-          <Content />
-        </Layout>
-      </div>
-      <BackToUp>
-        ^
-      </BackToUp>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:about" element={<About />} />
+      </Routes>
     </filterContext.Provider>
   )
 }
-
-export default App
