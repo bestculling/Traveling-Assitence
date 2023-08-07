@@ -12,7 +12,7 @@ export default function App() {
     <filterContext.Provider value={{ provinceState, setProvinceState }}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:about" element={<About />} />
+        <Route path="/:id" element={<About />} />
       </Routes>
     </filterContext.Provider>
   )

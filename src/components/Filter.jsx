@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
 import { province } from '../data/filterExplore'
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { filterContext } from '../context/filterContext';
 import { useData } from '../hooks/useData';
 

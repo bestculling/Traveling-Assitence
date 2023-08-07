@@ -14,7 +14,7 @@ function Index() {
             {
                 provinceState.length !== 0 ? (provinceState.map((e, i) => (
                     <Card key={i} border="secondary" className='my-2 text-white'>
-                        <Link to="/:loading">
+                        <Link to={`/${e.name}`}>
                             <Container>
                                 <Card.Img variant="top" className='mt-2 rounded' key={i} style={{ width: '200px', height: '200px' }} src={e.image[0]} />
                             </Container>
