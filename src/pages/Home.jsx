@@ -7,12 +7,15 @@ import BackToUp from '@uiw/react-back-to-top'
 
 export default function Home() {
   return (
-    <div style={{ background: "#121212" }} className='overflow-auto'>
-      <Navbar />
-      <Layout>
-        <Filter />
-        <Content />
-      </Layout>
+    <div className='testx w-100 h-100'>
+      <div className='custom_background'></div>
+      <div className='custom_app'>
+        <Navbar />
+        <Layout>
+          <Filter />
+          <Content />
+        </Layout>
+      </div>
       <BackToUp>
         ^
       </BackToUp>

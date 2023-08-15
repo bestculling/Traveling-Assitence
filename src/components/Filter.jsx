@@ -29,7 +29,7 @@ function Filter() {
     }
 
     return (
-        <div style={{ width: "250px" }} className='d-none d-sm-block overflow-auto rounded bg-dark text-white'>
+        <div style={{ width: "250px" }} className='d-none d-sm-block overflow-auto rounded border text-white'>
             <Container>
                 <div className="fw-bold my-3 filter__header">
                     จังหวัด

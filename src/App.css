@@ -6,7 +6,28 @@
   width: 100vw;
 }
 
+body {
+  background-image: url('./assets/367346324_6664088583647706_3226663893111053658_n.jpg');
+  background-position: center;
+}
+
 a {
   text-decoration: none !important;
   color: white !important;
+}
+
+.custom_background {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh !important;
+  background-image: url('./assets/367346324_6664088583647706_3226663893111053658_n.jpg');
+}
+
+.custom_app {
+  z-index: 1;
+}
+
+.custom_about {
+  background-image: url('./assets/367346324_6664088583647706_3226663893111053658_n.jpg');
 }
