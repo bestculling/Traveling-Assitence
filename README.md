@@ -1,8 +1,13 @@
-# React + Vite
+# Traveling Assitence
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+เว็ปไซต์เเนะนำสถานที่ท่องเที่ยวในประเทศไทย
 
-Currently, two official plugins are available:
+<div>
+<p float="left" align="center">
+  <img src="https://github.com/bestculling/Traveling-Assitence/blob/main/src/poster/p1.png" height="300px" width="30%" />
+  <img src="https://github.com/bestculling/Traveling-Assitence/blob/main/src/poster/p2.png" height="300px" width="30%" />
+</p>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Tools & Technology Stacks
+- HTML, CSS, Javascript, React
