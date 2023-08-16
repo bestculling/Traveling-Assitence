@@ -49,15 +49,22 @@ export default function About() {
                                     </Carousel>
                                 </div>
                                 <div className='w-100'>
-                                    <p style={{ width: "150px" }} className='text-center border border-success rounded p-1'>{s.province}</p>
+                                    <p style={{ width: "150px" }} 
+                                        className='text-center border border-success rounded p-1'>
+                                            {s.province}
+                                    </p>
                                     <h2>{s.name}</h2>
                                     <p>{s.desc}</p>
                                     <p>ที่อยู่: {s.location}</p>
-                                    <p className='d-flex gap-2'>เครดิตข้อมูล: <a href={s.credit} target='_blank'><Badge style={{ maxWidth: "200px" }} className='text-truncate' bg="info">{s.credit}</Badge></a></p>
+                                    <p className='d-flex gap-2'>เครดิตข้อมูล: 
+                                        <a href={s.credit} target='_blank'>
+                                            <Badge style={{ maxWidth: "200px" }} className='text-truncate' bg="info">
+                                                {s.credit}
+                                            </Badge>
+                                        </a>
+                                    </p>
                                     <p style={{ width: "100px" }} className='text-center border border-secondary rounded p-1'>{s.tag}</p>
                                 </div>
-
-
                             </div>
                         ))
                     }

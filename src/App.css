@@ -7,8 +7,11 @@
 }
 
 body {
-  background-image: url('./assets/367346324_6664088583647706_3226663893111053658_n.jpg');
+  background-image: url('./assets/landing.jpg');
   background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* background-color: #121212 !important; */
 }
 
 a {
@@ -21,13 +24,4 @@ a {
   z-index: -1;
   width: 100vw;
   height: 100vh !important;
-  background-image: url('./assets/367346324_6664088583647706_3226663893111053658_n.jpg');
-}
-
-.custom_app {
-  z-index: 1;
-}
-
-.custom_about {
-  background-image: url('./assets/367346324_6664088583647706_3226663893111053658_n.jpg');
 }
