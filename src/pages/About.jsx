@@ -33,10 +33,10 @@ export default function About() {
         <div className='custom_about overflow-auto' id='root'>
             <Navbar />
             {
-                idata ? (<div style={{ maxWidth: '950px' }} className='border mx-5 mx-lg-auto my-5 text-white rounded'>
+                idata ? (<div style={{ maxWidth: '950px' }} className='mx-5 mx-lg-auto my-5 text-white rounded'>
                     {
                         idata.map((s, i) => (
-                            <div key={i} className='d-flex gap-4 px-4 py-4'>
+                            <div key={i} className='rounded bg-dark d-flex gap-4 px-4 py-4'>
                                 <div className='w-100'>
                                     <Carousel activeIndex={index} onSelect={handleSelect}>
                                         {
